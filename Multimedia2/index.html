@@ -11,6 +11,28 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
+		<script>
+        function fallo(e) {
+            switch (e.target.error.code) {
+            case e.target.error.MEDIA_ERR_ABORTED:
+                alert('Has abortado el playback.');
+                break;
+            case e.target.error.MEDIA_ERR_NETWORK:
+                alert('Error en la red.');
+                break;
+            case e.target.error.MEDIA_ERR_DECODE:
+                alert('Problema de codificación.');
+                break;
+            case
+            e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+                alert('Formato no soportado o archivo no encontrado.');
+                break;
+            default:
+                alert('Ha ocurrido un error desconocido.');
+                break;
+            }
+        }
+    </script>
 		<noscript>
 			<link rel="stylesheet" href="css/Restaurante.css.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -68,46 +90,24 @@
 		<div id="page">
 
 			<!-- Extra -->
-			<div id="marketing" class="container">
-				<div class="row">
-					<div class="3u">
+			<div id="main" class="container">
+				<div id="marketing" class="row">
+					<div class="col-lg-6">
 						<section>
 							<header>
-								<h2>Feugiat Tempus</h2>
+								<h2>Video de Valencia en tus manos</h2>
 							</header>
-							<p class="subtitle">In posuere eleifend odio. Quisque semper augue mattis maecenas ligula.</p>
-							<p><a href="#"><img src="images/pics13.jpg" alt=""></a></p>
-							<a href="#" class="button">More</a>
+							<p><video src="" controls height="300" width="400" loop autoplay onerror="fallo(event)">
+                                <source src="" type="video/h264" /></video></p>
 						</section>
 					</div>
-					<div class="3u">
+					<div class="col-lg-6">
 						<section>
 							<header>
-								<h2>Maecenas lectus</h2>
+								<h2>Video de Valencia en tus manos</h2>
 							</header>
-							<p class="subtitle">In posuere eleifend odio. Quisque semper augue mattis maecenas ligula.</p>
-							<p><a href="#"><img src="images/pics14.jpg" alt=""></a></p>
-							<a href="#" class="button">More</a>
-						</section>
-					</div>
-					<div class="3u">
-						<section>
-							<header>
-								<h2>Luctus lectus</h2>
-							</header>
-							<p class="subtitle">In posuere eleifend odio. Quisque semper augue mattis maecenas ligula.</p>
-							<p><a href="#"><img src="images/pics15.jpg" alt=""></a></p>
-							<a href="#" class="button">More</a>
-						</section>
-					</div>
-					<div class="3u">
-						<section>
-							<header>
-								<h2>Posuere eleifend</h2>
-							</header>
-							<p class="subtitle">In posuere eleifend odio. Quisque semper augue mattis maecenas ligula.</p>
-							<p><a href="#"><img src="images/pics16.jpg" alt=""></a></p>
-							<a href="#" class="button">More</a>
+							<p><video src="" controls height="300" width="400" loop autoplay onerror="fallo(event)">
+                                <source src="" type="video/h264" /></video></p>
 						</section>
 					</div>
 				</div>
@@ -120,63 +120,36 @@
 					<div class="6u">
 						<section>
 							<header>
-								<h2>Integer gravida nibh quis urna</h2>
-								<span class="byline">Augue praesent a lacus at urna congue rutrum</span>
+								<h2>Un poco de historia de Valencia</h2>
+								<span class="byline">Quizas no sepas que...</span>
 							</header>
-							<p>This is <strong>Ex Machina</strong>, a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit! Check out more of our stuff at <a href="http://templated.co">our site</a> or follow us on <a href="http://twitter.com/templatedco">Twitter</a>.</p>
-							<p>Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl. Fusce mattis viverra elit. Fusce quis tortor. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget lorem ipsum dolor. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat. Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat.</p>
-							<p>Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl. Fusce mattis viverra elit. Fusce quis tortor. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget lorem ipsum dolor. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat. Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat.</p>
-							<a href="#" class="button">More Details</a>
+							<p>El territorio actual valenciano, coincide en su mayor parte con el del histórico <strong>Reino de Valencia</strong>, el cual a lo largo de la historia ha recibido diversas denominaciones: así, a finales del siglo XIX se conocía como Región Valenciana y a partir de la década de 1960 se ha venido empleando la forma no oficial (aunque se cite, junto a la denominación Reino de Valencia, en el preámbulo del Estatuto de Autonomía) de País Valenciano. También se usa por abreviar, Valencia, aunque este último puede llevar a confusión con la ciudad de Valencia o con la provincia de Valencia.</p>
+							<p>Su territorio, con capital en Valencia, está situado en el este y sureste de la Península Ibérica. También forma parte del territorio valenciano el archipiélago de las islas Columbretes, la Isla de Tabarca y otras islas menores e islotes cercanos a la costa, además del Rincón de Ademuz, un exclave separado totalmente del resto del territorio valenciano por el municipio conquense de Santa Cruz de Moya al sur, y al norte por el municipio turolense de Arcos de las Salinas. Tiene una superficie de 23.255 km², siendo la 8ª autonomía más extensa de España. Está formada por las provincias de Alicante, Castellón y Valencia, y limita al norte con Cataluña y Aragón, al oeste con Castilla-La Mancha y Aragón, y al sur con la Región de Murcia.</p>
+							<a href="https://es.wikipedia.org/wiki/Historia_de_la_Comunidad_Valenciana" class="button">Más Detalles</a>
 						</section>
 					</div>
 					<div class="3u">
 						<section class="sidebar">
 							<header>
-								<h2>Feugiat Tempus</h2>
+								<h2>Que hacer en Valencia</h2>
 							</header>
 							<ul class="style2">
 								<li>
-									<a href="#"><img src="images/pics07.jpg" alt=""></a>
-									<p>Donec leo, vivamus fermentum augue praesent a lacus at urna rutrum.</p>
+									<a href="http://www.lovevalencia.com/programa-de-fallas-2017.html"><img src="http://www.turisvalencia.es/blog/wp-content/uploads/2014/02/Fallas-ok.jpg" alt="enlace_fallas"></a>
+									<p><strong>Vivir las fallas</strong>, un espectaculo que no te puedes perder.Las Fallas son unas fiestas que 119 de marzo, con una tradición arraigada en la ciudad de Valencia y diferentes poblaciones de la Comunidad Valenciana. Oficialmente empiezan el último domingo de febrero con el acto de la Crida.</p>
 								</li>
 								<li>
-									<a href="#"><img src="images/pics08.jpg" alt=""></a>
-									<p>Donec leo, vivamus fermentum augue praesent a lacus at urna rutrum.</p>
+									<a href="http://www.fallas.com/"><img src="http://i1.trekearth.com/photos/33752/falleras-en-la-ofrenda.jpg" alt="enlace_falleras"></a>
+									<p>Ver la ofrenda floral de las <strong>falleras</strong> de Valencia.La Ofrenda de Flores es uno de los actos más conocidos de las Fallas. Durante dos días, los miles de falleros y falleras que existen en Valencia acuden a la plaza de la Virgen a ofrecer su tributo a la patrona de Valencia.</p>
 								</li>
 								<li>
-									<a href="#"><img src="images/pics09.jpg" alt=""></a>
-									<p>Donec leo, vivamus fermentum augue praesent a lacus at urna rutrum.</p>
+									<a href="http://www.cosasdevalencia.es/comprar-de-noche-valencia-shopening-night/"><img src="http://www.cosasdevalencia.es/images/chica_semaforo.jpg" alt="enlace_tiendas"></a>
+									<p>Para esta ocasión especial, <strong>dos zonas de Valencia abrirán sus comercios hasta las 12 de la noche</strong>. La conocida milla de oro de la ciudad ubicada en la calle Poeta Querol, que tiene las mejores marcas de la urbe y la zona del restaurado Mercado de Colón y la Galería Jorge Juan.</p>
 								</li>
 								<li>
-									<a href="#"><img src="images/pics10.jpg" alt=""></a>
-									<p>Donec leo, vivamus fermentum augue praesent a lacus at urna rutrum.</p>
+									<a href="http://www.parquealbufera.com/modules/catalog/singlelink.php?cid=3&lid=4"><img src="https://farm7.staticflickr.com/6225/6358786985_e923a785c7_z.jpg" alt="enlace_albufera"></a>
+									<p>Una de las mejores formas de conocer uno de los espacios naturales de mayor valor medioambiental y ecológico de Europa, el <strong>Parque Natural de la Albufera</strong>, con un paseo en barca y si es al atardecer, mucho mejor. Los colores dorados y anaranjados se funden para ofrecer este bello espectáculo cada tarde.</p>
 								</li>
-							</ul>
-						</section>
-					</div>
-					<div class="3u">
-						<section class="sidebar">
-							<header>
-								<h2>Feugiat Tempus</h2>
-							</header>
-							<ul class="style1">
-								<li><a href="#">Maecenas luctus lectus at sapien</a></li>
-								<li><a href="#">Etiam rhoncus volutpat erat</a></li>
-								<li><a href="#">Donec dictum metus in sapien</a></li>
-								<li><a href="#">Nulla luctus eleifend purus</a></li>
-								<li><a href="#">Maecenas luctus lectus at sapien</a></li>
-							</ul>
-						</section>
-						<section class="sidebar">
-							<header>
-								<h2>Nulla luctus eleifend</h2>
-							</header>
-							<ul class="style1">
-								<li><a href="#">Maecenas luctus lectus at sapien</a></li>
-								<li><a href="#">Donec dictum metus in sapien</a></li>
-								<li><a href="#">Integer gravida nibh quis urna</a></li>
-								<li><a href="#">Etiam posuere augue sit amet nisl</a></li>
-								<li><a href="#">Mauris vulputate dolor sit amet nibh</a></li>
 							</ul>
 						</section>
 					</div>
