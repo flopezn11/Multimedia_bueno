@@ -86,16 +86,49 @@
                         <input type="submit" class="btn btn-default" name="submit" value="Submit">
                     </form>
                     <br>
-				</div>
-			</div>
-			<!-- Main -->
+                </div>
+                <div class="col-lg-8">
+                    <input type="file" id="files" name="files[]" />
+                    <br />
+                    <output id="list"></output>
 
-		</div>
-	<!-- /Main -->
+                    <script>
+                        function archivo(evt) {
+                            var files = evt.target.files; // FileList object
 
-	<!-- Featured -->
-		<div id="footer">
-			<div class="container-fluid">
+                            // Obtenemos la imagen del campo "file".
+                            for (var i = 0, f; f = files[i]; i++) {
+                                //Solo admitimos imágenes.
+                                if (!f.type.match('image.*')) {
+                                    continue;
+                                }
+
+                                var reader = new FileReader();
+
+                                reader.onload = (function (theFile) {
+                                    return function (e) {
+                                        // Insertamos la imagen
+                                        document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('');
+                                    };
+                                })(f);
+
+                                reader.readAsDataURL(f);
+                            }
+                        }
+
+                        document.getElementById('files').addEventListener('change', archivo, false);
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!-- Main -->
+
+    </div>
+    <!-- /Main -->
+
+    <!-- Featured -->
+    <div id="footer">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2" id="contacto">
                     <h3>Contact:</h3>
@@ -131,9 +164,7 @@
                     <br>
                 </div>
             </div>
-            </div>
-		</div>
-
-
+        </div>
+    </div>
 	</body>
 </html>
