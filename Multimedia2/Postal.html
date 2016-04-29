@@ -84,34 +84,35 @@
         <!-- Main -->
         <div id="main" class="container">
             <h1>Postal</h1>
+            <h2 id="postalh2">Acuérdate de un amigo</h2>
             <div class="row">
                 <div class="col-lg-12">
                     <form action="enviar.php" method="post">
                         <div class="col-lg-6">
                             <br>
                             <label for="nombre">Nombre:</label>
-                            <input type="text" placeholder="Name" class="form-control" name="nombre" id="first_name">
+                            <input type="text" placeholder="Name" class="form-control" name="nombre" value="" title="nombre" id="first_name">
                         </div>
                         <div class="col-lg-6">
                             <br>
                             <label for="apellidos">Apellidos:</label>
-                            <input type="text" placeholder="Lastname" class="form-control" name="apellidos" id="last_name">
+                            <input type="text" value="" title="apellidos" placeholder="Lastname" class="form-control" name="apellidos" id="last_name">
                         </div>
                         <div class="col-lg-6">
                             <br>
                             <label for="email">Email:</label>
-                            <input type="text" class="form-control" placeholder="email" name="email" id="email">
+                            <input type="text" class="form-control" placeholder="email" value="" title="email" name="email" id="email">
                         </div>
                         <div class="col-lg-6">
                             <br>
                             <label for="mensaje">Mensaje:</label>
                             <br>
-                            <textarea rows="5" placeholder="Message to send" class="form-control" name="mensaje" cols="30" id="message"></textarea>
+                            <textarea rows="5" placeholder="Message to send" class="form-control" value="" title="mensaje" name="mensaje" cols="30" id="message"></textarea>
                         </div>
                         <br>
                         <div class="col-lg-12">
                             <label for="imagenes">Imágenes:</label>
-                            <input type="file" id="files" name="imagenes" />
+                            <input type="file" id="files" value="" title="imagenes" name="imagenes" />
                         </div>
                         <div id="grande" class="col-lg-12 col-md-12 hidden-sm hidden-xs">
                             <br>
@@ -178,9 +179,12 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-3 btn-group" id="redes">
                     <h3>Redes Sociales:</h3>
-                    <a class="btn" href="https://www.facebook.com/comunitatvalenciana"><img src="images/Facebook.png" alt="enlace_facebook" width="50px" height="50px"></a>
-                    <a class="btn" href="https://twitter.com/c_valenciana?lang=es"><img src="images/Twitter.png" alt="enlace_twitter" width="50px" height="50px"></a>
-                    <a class="btn" href="https://www.instagram.com/comunitat_valenciana/"><img src="images/Instagram.png" alt="enlace_instagram" width="50px" height="50px"></a>
+                    <a class="btn" href="https://www.facebook.com/comunitatvalenciana"><img src="images/Facebook.png" alt="enlace_facebook" width="50px" height="50px">
+                    </a>
+                    <a class="btn" href="https://twitter.com/c_valenciana?lang=es"><img src="images/Twitter.png" alt="enlace_twitter" width="50px" height="50px">
+                    </a>
+                    <a class="btn" href="https://www.instagram.com/comunitat_valenciana/"><img src="images/Instagram.png" alt="enlace_instagram" width="50px" height="50px">
+                    </a>
                 </div>
                 <div class="col-md-3" id="member" align="center">
                     <h3>Diseñadores:</h3>
